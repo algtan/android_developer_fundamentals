@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dialog For Alert</string>
+    <string name="button_text_alert">Alert</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="toast_ok">Pressed OK</string>
+    <string name="toast_cancel">Pressed Cancel</string>
+</resources>

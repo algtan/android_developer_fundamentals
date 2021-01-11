@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.algtan.implicitintentsreceiver">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <!-- This Intent filter is part of the default project manifest -->
+            <intent-filter>
+                <!-- This intent-filter indicates that this Activity is the main entry point for the app -->
+                <action android:name="android.intent.action.MAIN" />
+                <!-- This activity should appear as a top-level item in the launcher -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Second Activity Filter to take Implicit Intents -->
+            <intent-filter>
+                <!-- Activity can show the user some information, the action is VIEW -->
+                <!-- The Intent filter declares any Inent with view actions -->
+                <action android:name="android.intent.action.VIEW" />
+                <!-- Any Activity that you want to accept an implicit Intent must include the DEFAULT Intent filter -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- Requests for browsable links form web pages, email, or other sources -->
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- URIs that contain a scheme of http AND a host name of developer.android.com -->
+                <data android:scheme="http" android:host="developer.android.com" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>
